@@ -73,14 +73,6 @@ textarea {
   }
 }
 
-a {
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
 strong,
 b {
   font-weight: 600;
@@ -148,7 +140,13 @@ textarea {
 }
 
 a {
+  color: #4478ff;
+  text-decoration: none;
+}
+
+a:hover {
   color: #0f869a;
+  text-decoration: underline;
 }
 
 strong,
@@ -274,7 +272,6 @@ body {
   -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
-  /* background-color: rgba(15, 134, 154, 0.1); */
   background-color: rgb(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
 }
@@ -304,11 +301,6 @@ body {
   left: 0;
   width: 10%;
   height: 1px;
-}
-
-.wrapper > header.special {
-  /* padding: 4rem 2rem; */
-  /* background-color: #d7d7d7; */
 }
 
 @media screen and (max-width: 980px) {

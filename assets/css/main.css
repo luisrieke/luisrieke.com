@@ -61,6 +61,18 @@ textarea {
   line-height: 1.65;
 }
 
+@media screen and (max-width: 480px) {
+  /* todo */
+
+  .special {
+    text-align: center;
+  }
+
+  ul {
+    padding-inline-start: 0px;
+  }
+}
+
 a {
   text-decoration: underline;
 }
@@ -145,9 +157,10 @@ b {
 }
 
 h1 {
-  color: rgba(0, 0, 0, 0.75);
+  color: #4478ff;
   text-align: center;
   font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
 h2,
@@ -155,7 +168,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: #1e1f23;
+  color: #242f5c;
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* List */
@@ -231,6 +245,21 @@ body {
 
   #header > .logo a {
     font-size: 3rem;
+  }
+}
+
+/* Header Image */
+
+.header-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5%;
+}
+
+@media screen and (max-width: 880px) {
+  .header-image {
+    width: 20%;
   }
 }
 
@@ -347,11 +376,12 @@ body {
 /* Footer */
 
 #footer a {
-  color: rgba(63, 63, 63, 0.75);
+  color: #7b85b7;
+  text-decoration: none;
 }
 
 #footer a:hover {
-  color: #fff;
+  color: #797fa4;
 }
 
 #footer .copyright {

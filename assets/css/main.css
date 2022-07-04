@@ -1,5 +1,15 @@
 /* Basic */
 
+html {
+  min-height: 100%;
+}
+
+body {
+  background-attachment: scroll;
+  background-size: auto;
+  background-position: top;
+}
+
 @media screen and (max-width: 2000px) {
   html,
   body {
@@ -15,7 +25,7 @@
   }
 }
 
-/* Type */
+/* Typo */
 
 html {
   font-size: 13pt;
@@ -62,7 +72,9 @@ textarea {
 }
 
 @media screen and (max-width: 480px) {
-  /* todo */
+  p {
+    padding-left: 0px;
+  }
 
   .special {
     text-align: center;
@@ -70,6 +82,13 @@ textarea {
 
   ul {
     padding-inline-start: 0px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  p {
+    margin: 0 0 2rem 0;
+    padding-left: 40px;
   }
 }
 
@@ -81,15 +100,6 @@ b {
 em,
 i {
   font-style: italic;
-}
-
-p {
-  margin: 0 0 2rem 0;
-}
-
-p:last-child {
-  margin: 0;
-  padding-left: 32px;
 }
 
 h1,
@@ -196,6 +206,8 @@ header h6 + p {
   margin-top: -0.6rem;
 }
 
+/* Background gradient */
+
 body {
   background: #74ebd5; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -226,14 +238,6 @@ body {
   font-weight: 700;
   text-decoration: none;
   line-height: 1rem;
-}
-
-@media screen and (max-width: 1280px) {
-  body {
-    background-attachment: scroll;
-    background-size: auto;
-    background-position: top;
-  }
 }
 
 @media screen and (max-width: 736px) {
@@ -273,7 +277,6 @@ body {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   background-color: rgb(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
 }
 
 @media screen and (min-width: 980px) {
@@ -368,6 +371,7 @@ body {
 /* Footer */
 
 #footer a {
+  font-size: smaller;
   color: #7b85b7;
   text-decoration: none;
 }
@@ -380,10 +384,4 @@ body {
   margin: 0 0 2rem 0;
   padding: 0 1rem;
   text-align: center;
-}
-
-@media screen and (max-width: 736px) {
-  #footer {
-    padding: 1rem 0 0.1rem 0;
-  }
 }

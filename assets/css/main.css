@@ -169,6 +169,14 @@ h1 {
   text-align: center;
   font-size: 2rem;
   font-family: "Courier New", Courier, monospace;
+  animation: movingTitleShadow 8s infinite;
+}
+
+@keyframes movingTitleShadow {
+  50% {
+    -webkit-filter: drop-shadow(2px 4px 8px rgba(231, 224, 210, 0.706));
+    filter: drop-shadow(2px 4px 8px rgba(231, 224, 210, 0.706));
+  }
 }
 
 h2,
@@ -261,6 +269,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 5%;
+  animation: movingImageShadow 8s infinite;
+}
+
+@keyframes movingImageShadow {
+  50% {
+    -webkit-filter: drop-shadow(-2px -4px 8px rgba(231, 224, 210, 0.706));
+    filter: drop-shadow(-2px -4px 8px rgba(231, 224, 210, 0.706));
+  }
 }
 
 @media screen and (max-width: 880px) {

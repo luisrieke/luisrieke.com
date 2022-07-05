@@ -206,20 +206,24 @@ header h6 + p {
   margin-top: -0.6rem;
 }
 
-/* Background gradient */
+/* Background moving gradient */
 
 body {
-  background: #74ebd5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #acb6e5,
-    #74ebd5
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #acb6e5,
-    #74ebd5
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, #ee7752, #b67991, #acb6e5, #74ebd5);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #header {

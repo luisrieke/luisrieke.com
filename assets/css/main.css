@@ -338,16 +338,15 @@ body {
   }
 }
 
-/* Just for some pages */
+/* Just for some pages visible links */
 
 #linksvisible a {
   text-decoration: underline;
   color: rgb(89, 93, 117);
 }
 
-/* Podcast */
+/* Podcast Button */
 
-/* method 2 -> use background-clip to support border-radius */
 .btn-gradient {
   background: linear-gradient(to right, #e3dec9, #c9e5e0) border-box;
   border-radius: 12px;
@@ -361,4 +360,10 @@ body {
   border-radius: 48px;
   border: 24px solid transparent;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .btn-gradient {
+    margin: 0 auto 40px auto;
+  }
 }

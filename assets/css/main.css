@@ -337,3 +337,28 @@ body {
     padding: 2rem;
   }
 }
+
+/* Just for some pages */
+
+#linksvisible a {
+  text-decoration: underline;
+  color: rgb(89, 93, 117);
+}
+
+/* Podcast */
+
+/* method 2 -> use background-clip to support border-radius */
+.btn-gradient {
+  background: linear-gradient(to right, #e3dec9, #c9e5e0) border-box;
+  border-radius: 12px;
+  border: 24px solid transparent;
+  transition-duration: 0.4s;
+  margin: 0 0 40px 40px;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
+  border-radius: 48px;
+  border: 24px solid transparent;
+  cursor: pointer;
+}

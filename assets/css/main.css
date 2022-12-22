@@ -81,7 +81,7 @@ textarea {
   }
 
   ol {
-    padding-left: 0px;
+    margin-left: 0px;
     display: inline-block;
     text-align: left;
   }

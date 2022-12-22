@@ -81,8 +81,6 @@ textarea {
   }
 
   ol {
-    padding: 0px 20px auto;
-    display: inline-block;
     text-align: left;
   }
 }

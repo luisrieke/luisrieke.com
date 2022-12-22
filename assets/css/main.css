@@ -79,10 +79,6 @@ textarea {
   ul {
     padding-inline-start: 0px;
   }
-
-  ol {
-    text-align: left;
-  }
 }
 
 @media screen and (min-width: 480px) {

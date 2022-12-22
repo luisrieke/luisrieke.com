@@ -78,6 +78,7 @@ textarea {
 
   ul {
     padding-inline-start: 0px;
+    display: inline-block;
     text-align: left;
   }
 }

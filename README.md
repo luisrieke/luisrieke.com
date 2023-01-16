@@ -1,4 +1,4 @@
-# 👨🏻 luisrieke.com
+# 👋 luisrieke.com
 
 my social links and projects listed.
 

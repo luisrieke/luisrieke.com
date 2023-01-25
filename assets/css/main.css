@@ -148,13 +148,13 @@ textarea {
 }
 
 a {
-  color: #272727;
-  text-decoration: none;
+  color: #000000;
+  text-decoration-color: #c4def9;
 }
 
 a:hover {
   color: #000000;
-  text-decoration: underline;
+  text-decoration-color: #e3dec9;
 }
 
 strong,
@@ -388,7 +388,7 @@ body {
 
 @media screen and (max-width: 980px) {
   .button {
-    display: none;
+    border: 6px solid transparent;
   }
 }
 
@@ -412,7 +412,7 @@ body {
 a.buttonLanguage {
   border-radius: 48px;
   display: inline-block;
-  margin: 0 10px 0 0;
+  margin: 10px 10px 0 0;
   padding: 0 20px;
   background-color: #e2e4ec;
   color: #fff;

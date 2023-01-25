@@ -406,3 +406,33 @@ body {
 .button404:hover {
   background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
 }
+
+/* switch languages on reading page */
+
+a.buttonLanguage {
+  border-radius: 48px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 0 20px;
+  background-color: #e2e4ec;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.active {
+  background-color: #c4def9;
+}
+
+.contentLanguage {
+  margin-top: 30px;
+}
+
+div[class*="contentLanguage-"] {
+  display: none;
+}
+
+div.active {
+  display: block;
+}

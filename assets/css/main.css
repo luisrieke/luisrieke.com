@@ -367,3 +367,42 @@ body {
     margin: 0 auto 40px auto;
   }
 }
+
+/* Back to homepage button */
+
+.button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #e3dec9, #c9e5e0) border-box;
+  border-radius: 48px;
+  border: 12px solid transparent;
+  transition-duration: 0.4s;
+  margin: 20px 20px 20px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
+}
+
+@media screen and (max-width: 980px) {
+  .button {
+    display: none;
+  }
+}
+
+/* 404 button */
+
+.button404 {
+  background: linear-gradient(to right, #e3dec9, #c9e5e0) border-box;
+  border-radius: 48px;
+  border: 24px solid transparent;
+  transition-duration: 0.4s;
+  margin: 20px 20px 20px 20px;
+  cursor: pointer;
+}
+
+.button404:hover {
+  background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
+}

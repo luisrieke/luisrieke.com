@@ -417,10 +417,13 @@ body {
   transition-duration: 0.4s;
   margin: 20px 20px 20px 20px;
   cursor: pointer;
+  font-size: 24px;
 }
 
 .buttonPaypal:hover {
   background: linear-gradient(to right, #2e353c, #646a83) border-box;
+  box-shadow: 0 0.5em 0.5em -0.4em #a9cef5;
+  transform: translateY(-0.25em);
 }
 
 /* revolut button */
@@ -433,10 +436,13 @@ body {
   transition-duration: 0.4s;
   margin: 20px 20px 20px 20px;
   cursor: pointer;
+  font-size: 24px;
 }
 
 .buttonRevolut:hover {
   background: linear-gradient(to right, #2e353c, #646a83) border-box;
+  box-shadow: 0 0.5em 0.5em -0.4em #a9cef5;
+  transform: translateY(-0.25em);
 }
 
 /* switch languages on reading page */
@@ -475,10 +481,18 @@ div.active {
   margin: 0 auto;
   display: block;
   margin-bottom: 64px;
+  border-radius: 164px;
 }
 
 @media screen and (max-width: 980px) {
   .gif-embed {
     width: 100%;
+    height: auto;
   }
+}
+
+/* small text */
+
+.smallText {
+  font-size: 0.8rem;
 }

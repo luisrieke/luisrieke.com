@@ -495,4 +495,121 @@ div.active {
 
 .smallText {
   font-size: 0.8rem;
+  margin: 1rem 0 0 0;
+}
+
+/* copy key to clipboard for cash page */
+
+#copyKey {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #c4def9;
+  color: #ffffff;
+  width: 180px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+}
+#copyKey:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  bottom: -20px;
+  left: 82px;
+  clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-10px);
+  transition: all 300ms ease;
+}
+#copyKey:after {
+  content: attr(tooltip);
+  width: 140px;
+  bottom: -48px;
+  left: 20px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #8e8e8e;
+  color: #ffffff;
+  transform: translateY(-10px);
+  transition: all 300ms ease;
+  z-index: 1;
+}
+#copyKey:hover:before,
+#copyKey:hover:after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* copy Iban to clipboard for cash page */
+
+#copyIban {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #c4def9;
+  color: #ffffff;
+  width: 180px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+}
+#copyIban:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  bottom: -20px;
+  left: 82px;
+  clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateY(-10px);
+  transition: all 300ms ease;
+}
+#copyIban:after {
+  content: attr(tooltip);
+  width: 140px;
+  bottom: -48px;
+  left: 20px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #8e8e8e;
+  color: #ffffff;
+  transform: translateY(-10px);
+  transition: all 300ms ease;
+  z-index: 1;
+}
+#copyIban:hover:before,
+#copyIban:hover:after {
+  opacity: 1;
+  transform: translateY(0);
 }

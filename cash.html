@@ -53,10 +53,20 @@
 
                         <br>
                         <br>
-                        <p class="smallText"><i>bitcoin wallet:</i> 13LyiVSk3rFyMiFNJshAwP1fLY8RWcjsCH</p>
-                        <p class="smallText"><i>if you like it oldschool:</i> Luis Rieke, DE51 1203 0000 1033 6119 12,
-                            BYLADEM1001
+                        <p class="smallText"><i>bitcoin wallet:</i></p>
+                        <p class="smallText" id="key">13LyiVSk3rFyMiFNJshAwP1fLY8RWcjsCH</p>
+                        <button id="copyKey" tooltip="Copy to clipboard">Copy public key</button>
+                        <br>
+                        <br>
+
+                        <p class="smallText"><i>if you like it oldschool:</i></p>
+                        <p class="smallText">Luis Rieke</p>
+                        <p class="smallText" id="iban">DE51120300001033611912</p>
+                        <button id="copyIban" tooltip="Copy to clipboard">Copy IBAN</button>
+                        <p class="smallText">BYLADEM1001</p>
+                        <p class="smallText">Deutsche Kreditbank</p>
                         </p>
+
 
                         <br>
                     </div>
@@ -69,6 +79,35 @@
             </section>
         </div>
     </section>
+
+    <script>const keyElement = document.getElementById("key");
+        const ibanElement = document.getElementById("iban");
+
+        const copyButtonKey = document.getElementById("copyKey");
+        const copyButtonIban = document.getElementById("copyIban");
+
+        const copyKey = (e) => {
+            window.getSelection().selectAllChildren(keyElement);
+            document.execCommand("copy");
+            e.target.setAttribute("tooltip", "Copied! ✅");
+        };
+
+        const copyIban = (e) => {
+            window.getSelection().selectAllChildren(ibanElement);
+            document.execCommand("copy");
+            e.target.setAttribute("tooltip", "Copied! ✅");
+        };
+
+        const resetTooltip = (e) => {
+            e.target.setAttribute("tooltip", "Copy to clipboard");
+        };
+
+        copyButtonKey.addEventListener("click", (e) => copyKey(e));
+        copyButtonIban.addEventListener("click", (e) => copyIban(e));
+
+        copyButtonKey.addEventListener("mouseover", (e) => resetTooltip(e));
+        copyButtonIban.addEventListener("mouseover", (e) => resetTooltip(e));
+    </script>
 
 </body>
 

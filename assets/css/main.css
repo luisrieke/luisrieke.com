@@ -613,3 +613,60 @@ div.active {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* form */
+
+.form {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  margin-bottom: 100px;
+}
+
+iframe[src*="google.com/forms"] {
+  width: 100%;
+  height: 1200px;
+}
+
+@media screen and (max-width: 1680px) {
+  .form {
+    padding: 0 0px;
+    margin: 0 0px;
+  }
+}
+
+.footer-text {
+  text-align: center;
+  border: 3px solid #becdeb;
+  border-radius: 24px;
+  opacity: 0.3;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
+
+.footer-text:hover {
+  opacity: 1;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s ease-in-out;
+}
+
+.footer-text > a {
+  color: #7b7f88;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
+
+.footer-text > a:hover {
+  color: #becdeb;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s ease-in-out;
+}

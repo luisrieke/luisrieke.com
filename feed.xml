@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Updates</title>
+    <link>http://example.com/updates</link>
+    <description>Recent updates and news</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Apr 2023 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Developed Chrome extension</title>
+      <link>http://example.com/chrome-extension</link>
+      <description>Check out our new Chrome extension! 🚀</description>
+      <pubDate>Tue, 27 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cosurfingspace is live</title>
+      <link>http://example.com/cosurfingspace</link>
+      <description>Our cosurfingspace is now live! 🙌</description>
+      <pubDate>Tue, 26 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Coconut Coliving is live</title>
+      <link>http://example.com/coconut-coliving</link>
+      <description>Our Coconut Coliving space is now open! 🥥</description>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hotelagency is live</title>
+      <link>http://example.com/hotelagency</link>
+      <description>Our hotel booking agency is now live! 🌴</description>
+      <pubDate>Tue, 24 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cosurfingspace is live</title>
+      <link>http://example.com/cosurfingspace</link>
+      <description>Our cosurfingspace is now open for bookings! 🌊</description>
+      <pubDate>Tue, 23 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>First iOS published</title>
+      <link>http://example.com/first-ios</link>
+      <description>We just published our first iOS app! 📱</description>
+      <pubDate>Tue, 22 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Test text more test text</title>
+      <link>http://example.com/test-text</link>
+      <description>This is just a test message. 👨‍💻</description>
+      <pubDate>Tue, 21 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Booking platform for hotels</title>
+      <link>http://example.com/booking-platform</link>
+      <description>Our new booking platform for hotels is now live! 🛎️</description>
+      <pubDate>Tue, 20 Apr 2023 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

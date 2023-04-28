@@ -3,56 +3,32 @@
   <channel>
     <title>Updates</title>
     <link>https://luisrieke.com/updates</link>
-    <description>Recent updates and news</description>
+    <description>Recent updates and releases by Luis</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Apr 2023 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2023 00:00:00 GMT</lastBuildDate>
     <item>
-      <title>Developed Chrome extension 🚀</title>
+      <title>Developed Atlantico Chrome extension 🌊</title>
       <link>https://luisrieke.com/updates</link>
-      <description>Check out our new Chrome extension! 🚀</description>
-      <pubDate>Tue, 27 Apr 2023 00:00:00 GMT</pubDate>
+      <description>Check out our new Chrome extension!</description>
+      <pubDate>Tue, 28 Apr 2023 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Cosurfingspace is live 🌊</title>
+      <title>Nothing to see here 👀</title>
       <link>https://luisrieke.com/updates</link>
-      <description>Our cosurfingspace is now live! 🙌</description>
+      <description>This is a placeholder</description>
       <pubDate>Tue, 26 Apr 2023 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Coconut Coliving is live 🥥</title>
+      <title>I will use this section for updates 🥥</title>
       <link>https://luisrieke.com/updates</link>
-      <description>Our Coconut Coliving space is now open! 🥥</description>
+      <description>This is a placeholder</description>
       <pubDate>Tue, 25 Apr 2023 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Hotelagency is live 🌴</title>
+      <title>Placeholder feature is live 🌴</title>
       <link>https://luisrieke.com/updates</link>
-      <description>Our hotel booking agency is now live! 🌴</description>
+      <description>This is a placeholder</description>
       <pubDate>Tue, 24 Apr 2023 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Cosurfingspace is live 🏄</title>
-      <link>https://luisrieke.com/updates</link>
-      <description>Our cosurfingspace is now open for bookings! 🌊</description>
-      <pubDate>Tue, 23 Apr 2023 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>First iOS published</title>
-      <link>https://luisrieke.com/updates</link>
-      <description>We just published our first iOS app! 📱</description>
-      <pubDate>Tue, 22 Apr 2023 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Test text more test text</title>
-      <link>https://luisrieke.com/updates</link>
-      <description>This is just a test message. 👨‍💻</description>
-      <pubDate>Tue, 21 Apr 2023 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Booking platform for hotels</title>
-      <link>https://luisrieke.com/updates</link>
-      <description>Our new booking platform for hotels is now live! 🛎️</description>
-      <pubDate>Tue, 20 Apr 2023 00:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

@@ -407,6 +407,35 @@ body {
   background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
 }
 
+/* button mobile */
+
+.mobile-button {
+  background: linear-gradient(to right, #e3dec9, #c9e5e0) border-box;
+  border-radius: 48px;
+  border: 24px solid transparent;
+  transition-duration: 0.4s;
+  margin: 20px 20px 20px 20px;
+  cursor: pointer;
+}
+
+.mobile-button:hover {
+  background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
+}
+
+@media screen and (min-width: 980px) {
+  .mobile-button {
+    display: none;
+  }
+}
+
+/* Google calendar entries */
+
+@media screen and (max-width: 980px) {
+  .calendar-entries {
+    display: none;
+  }
+}
+
 /* paypal button */
 
 .buttonPaypal {

@@ -407,32 +407,27 @@ body {
   background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
 }
 
-/* button mobile */
+/* button calendar */
 
-.mobile-button {
-  background: linear-gradient(to right, #e3dec9, #c9e5e0) border-box;
+.calendar-button {
+  background: linear-gradient(to right, #c9dae3, #c9e5e0) border-box;
   border-radius: 48px;
   border: 24px solid transparent;
   transition-duration: 0.4s;
   margin: 20px 20px 20px 20px;
   cursor: pointer;
+  color: rgb(20, 33, 108);
 }
 
-.mobile-button:hover {
-  background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
+.calendar-button:hover {
+  background: linear-gradient(to right, #c4def9, #8cd7c2) border-box;
+  color: rgb(25, 92, 104);
 }
 
 @media screen and (min-width: 980px) {
-  .mobile-button {
-    display: none;
-  }
-}
-
-/* Google calendar entries */
-
-@media screen and (max-width: 980px) {
-  .calendar-entries {
-    display: none;
+  .calendar-button {
+    margin: 0;
+    font-size: 16px;
   }
 }
 

@@ -424,7 +424,7 @@ body {
   color: rgb(25, 92, 104);
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 480px) {
   .calendar-button {
     margin: 0;
     font-size: 16px;

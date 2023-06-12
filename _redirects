@@ -1,7 +1,7 @@
 # Redirects from what the browser requests to what we serve
 
 /home /
-/ /404 404
+/* /404 404
 /races https://passengertales.com/running
 /running https://passengertales.com/running
 /mountaineering https://passengertales.com/mountaineering

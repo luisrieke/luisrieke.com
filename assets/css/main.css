@@ -278,7 +278,7 @@ body {
 
 @media screen and (max-width: 980px) {
   .wrapper > header.special {
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
   }
 }
 
@@ -693,4 +693,20 @@ iframe[src*="google.com/forms"] {
   transition: opacity 0.55s ease-in-out;
   -moz-transition: opacity 0.55s ease-in-out;
   -webkit-transition: opacity 0.55s ease-in-out;
+}
+
+/* calendar booking sites */
+
+@media screen and (max-width: 808px) {
+  .calendly-inline-widget {
+    height: 600px;
+    border-radius: 24px;
+  }
+}
+
+@media screen and (min-width: 808px) {
+  .calendly-inline-widget {
+    height: 800px;
+    border-radius: 24px;
+  }
 }

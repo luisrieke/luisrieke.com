@@ -5,12 +5,6 @@
   to = "/index.html"
   status = 200
 
-# Old calendar link
-[[redirects]]
-  from = "/calendar.html"
-  to = "/calendar/2-hours.html"
-  status = 200
-
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"

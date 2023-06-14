@@ -371,7 +371,6 @@ body {
 /* Back to homepage button */
 
 .button {
-  position: absolute;
   top: 0;
   left: 0;
   background: linear-gradient(to right, #e3dec9, #c9e5e0) border-box;

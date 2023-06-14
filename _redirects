@@ -1,7 +1,6 @@
 # Redirects from what the browser requests to what we serve
 
 /home /
-/* /404 404
 /races https://passengertales.com/running
 /running https://passengertales.com/running
 /mountaineering https://passengertales.com/mountaineering
@@ -9,3 +8,4 @@
 /podcast https://podcast.digitalconomics.de/einladung
 /calendar /calendar/2-hours
 /calendar_de /calendar/2-stunden
+/* /404 404

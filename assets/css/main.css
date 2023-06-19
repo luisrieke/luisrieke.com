@@ -14,14 +14,6 @@ body {
   html,
   body {
     min-width: 320px;
-    padding: 2% 0 2%;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  html,
-  body {
-    padding: 4% 0 4%;
   }
 }
 

@@ -220,6 +220,10 @@ body {
 
 /* Main */
 
+#main {
+  margin: 4rem 0 4rem;
+}
+
 #main > .inner {
   margin: 0 auto;
   width: 80rem;
@@ -428,11 +432,10 @@ body {
   background: linear-gradient(to right, #003087, #3b7bbf) border-box;
   color: #fff;
   border-radius: 48px;
-  border: 24px solid transparent;
+  border: 14px solid transparent;
   transition-duration: 0.4s;
-  margin: 20px 20px 20px 20px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 .buttonPaypal:hover {
@@ -447,11 +450,11 @@ body {
   background: linear-gradient(to right, #000000, #3b3b3b) border-box;
   color: #fff;
   border-radius: 48px;
-  border: 24px solid transparent;
+  border: 14px solid transparent;
   transition-duration: 0.4s;
   margin: 20px 20px 20px 20px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 .buttonRevolut:hover {
@@ -649,41 +652,6 @@ iframe[src*="google.com/forms"] {
     padding: 0 0px;
     margin: 0 0px;
   }
-}
-
-.footer-text {
-  text-align: center;
-  border: 3px solid #becdeb;
-  border-radius: 24px;
-  opacity: 0.3;
-  transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -webkit-transition: opacity 1s ease-in-out;
-}
-
-.footer-text:hover {
-  opacity: 1;
-  transition: opacity 0.55s ease-in-out;
-  -moz-transition: opacity 0.55s ease-in-out;
-  -webkit-transition: opacity 0.55s ease-in-out;
-}
-
-.footer-text > a {
-  color: #7b7f88;
-  text-decoration: none;
-  opacity: 0.5;
-  transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -webkit-transition: opacity 1s ease-in-out;
-}
-
-.footer-text > a:hover {
-  color: #becdeb;
-  text-decoration: none;
-  opacity: 1;
-  transition: opacity 0.55s ease-in-out;
-  -moz-transition: opacity 0.55s ease-in-out;
-  -webkit-transition: opacity 0.55s ease-in-out;
 }
 
 /* calendar booking sites */

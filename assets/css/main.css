@@ -173,7 +173,7 @@ ul {
 /* Background moving gradient */
 
 body {
-  background: linear-gradient(-45deg, #94afcd, #b8b5a9, #99b5c7, #c9b0a2);
+  background: linear-gradient(-45deg, #badaff, #fffbed, #c7e9ff, rgb(255, 222, 237));
   background-size: 200% 200%;
   animation: gradient 12s ease infinite;
 }

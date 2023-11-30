@@ -173,7 +173,13 @@ ul {
 /* Background moving gradient */
 
 body {
-  background: linear-gradient(-45deg, #badaff, #fffbed, #c7e9ff, rgb(255, 222, 237));
+  background: linear-gradient(
+    -45deg,
+    #badaff,
+    #fffbed,
+    #c7e9ff,
+    rgb(255, 222, 237)
+  );
   background-size: 200% 200%;
   animation: gradient 12s ease infinite;
 }
@@ -668,4 +674,16 @@ iframe[src*="google.com/forms"] {
     height: 800px;
     border-radius: 24px;
   }
+}
+
+/* profile picture */
+
+.profile-pic {
+  float: right;
+  margin-left: 20px;
+  border-radius: 50%;
+  width: 40vw;
+  max-width: 300px;
+  height: 40vw;
+  max-height: 300px;
 }

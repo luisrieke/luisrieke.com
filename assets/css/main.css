@@ -1,5 +1,20 @@
 /* Basic */
 
+@font-face {
+  font-family: "heading_font_bold";
+  src: url("../fonts/Roboto_Mono/static/RobotoMono-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "heading_font_regular";
+  src: url("../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   min-height: 100%;
 }
@@ -57,7 +72,7 @@ body,
 input,
 select,
 textarea {
-  font-family: "Inter", sans-serif;
+  font-family: "heading_font_regular", monospace;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.65;
@@ -160,7 +175,7 @@ h4,
 h5,
 h6 {
   color: #242425;
-  font-family: "Inter", sans-serif;
+  font-family: "heading_font_bold", monospace;
 }
 
 /* List */
@@ -229,6 +244,8 @@ body {
 #main {
   margin: 4rem 0 4rem;
 }
+
+/* TODO: weird for /reading */
 
 #main > .inner {
   margin: 0 auto;
@@ -680,7 +697,8 @@ iframe[src*="google.com/forms"] {
 
 .profile-pic {
   float: right;
-  margin-left: 20px;
+  margin-left: 24px;
+  margin-bottom: 24px;
   border-radius: 50%;
   width: 40vw;
   max-width: 300px;

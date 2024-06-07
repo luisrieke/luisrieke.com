@@ -400,6 +400,20 @@ body {
   cursor: pointer;
 }
 
+.workshop-button {
+  padding: 0.5em 1em;
+  font-size: large;
+  font-weight: 700;
+  border: 2px solid black;
+}
+
+.workshop-request-button {
+  padding: 0.5em 1em;
+  font-size: large;
+  font-weight: 500;
+  border: 2px dotted black;
+}
+
 .button:hover {
   background: linear-gradient(to right, #c4def9, #e2e4ec) border-box;
 }

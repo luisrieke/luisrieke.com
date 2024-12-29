@@ -99,7 +99,7 @@ textarea {
 
 strong,
 b {
-  font-weight: 600;
+  font-weight: 800;
 }
 
 em,
@@ -718,4 +718,12 @@ iframe[src*="google.com/forms"] {
   max-width: 300px;
   height: 40vw;
   max-height: 300px;
+}
+
+/* highlighted text */
+
+.highlight {
+  background-color: #c4def9;
+  padding: 0 5px;
+  border-radius: 5px;
 }

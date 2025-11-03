@@ -707,6 +707,57 @@ iframe[src*="google.com/forms"] {
   }
 }
 
+/* Google Calendar Appointment Scheduling */
+
+.calendar-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.calendar-container iframe {
+  width: 100%;
+  border: 0;
+  display: block;
+  overflow: hidden;
+}
+
+/* Desktop */
+@media screen and (min-width: 809px) {
+  .calendar-container {
+    height: 800px;
+  }
+  
+  .calendar-container iframe {
+    height: 800px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 808px) {
+  .calendar-container {
+    height: 700px;
+    border-radius: 16px;
+  }
+  
+  .calendar-container iframe {
+    height: 700px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+  .calendar-container {
+    height: 650px;
+    border-radius: 12px;
+  }
+  
+  .calendar-container iframe {
+    height: 650px;
+  }
+}
+
 /* profile picture */
 
 .profile-pic {

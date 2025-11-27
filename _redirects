@@ -5,10 +5,10 @@
 /podcast_en.html https://podcast.digitalconomics.com/invite
 /podcast https://podcast.digitalconomics.de/einladung
 /podcast.html https://podcast.digitalconomics.de/einladung
-/workshop /workshops
-/calendar /calendar/2-hours
-/calendar.html /calendar/2-hours
-/calendar_de /calendar/2-stunden
-/calendar_de.html /calendar/2-stunden
+/calendar /calendar/booking
+/calendar.html /calendar/booking
+/cal /calendar/booking
+/cal.html /calendar/booking
 /* /404 404
-/calendar/book /calendar/booking.html 200
+/calendar/book.html /calendar/booking
+/calendar/book /calendar/booking

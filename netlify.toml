@@ -10,3 +10,8 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+[build]
+  image = "jammy"
+  functions = "functions"
+  node_version = "20.x"

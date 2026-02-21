@@ -1,15 +1,20 @@
-$(".buttonLanguage").first().addClass("active");
+$(".buttonLanguage[href='#']").first().addClass("active");
 
-$(".buttonLanguage").click(function () {
+$(".buttonLanguage").click(function (e) {
   var $this = $(this);
-  ($siblings = $this.parent().children()), (position = $siblings.index($this));
-  console.log(position);
+  if ($this.attr("href") === "#") {
+    e.preventDefault();
+  }
+  var $siblings = $this.parent().children(".buttonLanguage[href='#']");
+  var position = $siblings.index($this);
 
-  $(".contentLanguage div")
-    .removeClass("active")
-    .eq(position)
-    .addClass("active");
+  if (position >= 0) {
+    $(".contentLanguage div")
+      .removeClass("active")
+      .eq(position)
+      .addClass("active");
 
-  $siblings.removeClass("active");
-  $this.addClass("active");
+    $siblings.removeClass("active");
+    $this.addClass("active");
+  }
 });

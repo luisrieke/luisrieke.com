@@ -90,10 +90,122 @@
                         </div>
                     </div>
 
+                    <h2>Scan QR code</h2>
+                    <div class="qr-code-block">
+                        <button type="button" class="qr-code-preview" id="qrPreview" aria-label="Enlarge QR code">
+                            <img src="assets/images/qr-code-luis.png" alt="QR code to pay Luis" width="88" height="88" />
+                            <span class="qr-code-hint">Click to enlarge</span>
+                        </button>
+                    </div>
+
                 </header>
             </section>
         </div>
     </section>
+
+    <!-- QR code enlarge modal -->
+    <div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-label="QR code enlarged" hidden>
+        <div class="qr-modal-backdrop" id="qrModalBackdrop"></div>
+        <div class="qr-modal-content">
+            <button type="button" class="qr-modal-close" id="qrModalClose" aria-label="Close">×</button>
+            <img src="assets/images/qr-code-luis.png" alt="QR code to pay Luis" class="qr-modal-image" />
+        </div>
+    </div>
+
+    <style>
+        .qr-code-block {
+            margin: 0.5rem 0 1rem;
+        }
+        .qr-code-preview {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            font-family: var(--font);
+        }
+        .qr-code-preview:hover {
+            border-color: var(--text-muted);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .qr-code-preview:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        .qr-code-preview img {
+            display: block;
+            width: 88px;
+            height: 88px;
+            border-radius: 6px;
+        }
+        .qr-code-hint {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .qr-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .qr-modal[hidden] {
+            display: none;
+        }
+        .qr-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        .qr-modal-content {
+            position: relative;
+            background: var(--bg);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+            max-width: min(320px, 90vw);
+        }
+        .qr-modal-close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: var(--bg);
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.15s, background 0.15s;
+        }
+        .qr-modal-close:hover {
+            color: var(--text);
+            background: var(--border);
+        }
+        .qr-modal-close:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        .qr-modal-image {
+            display: block;
+            width: 256px;
+            height: 256px;
+            border-radius: 8px;
+        }
+    </style>
 
     <script>
         const copyToClipboard = async (text, btn) => {
@@ -132,6 +244,29 @@
 
         ["copyKey", "copyIban", "copyName", "copyBic", "copyBank"].forEach(id => {
             document.getElementById(id).addEventListener("mouseover", (e) => resetTooltip(e.target));
+        });
+
+        const qrModal = document.getElementById("qrModal");
+        const qrPreview = document.getElementById("qrPreview");
+        const qrModalBackdrop = document.getElementById("qrModalBackdrop");
+        const qrModalClose = document.getElementById("qrModalClose");
+
+        function openQrModal() {
+            qrModal.hidden = false;
+            document.body.style.overflow = "hidden";
+            qrModalClose.focus();
+        }
+        function closeQrModal() {
+            qrModal.hidden = true;
+            document.body.style.overflow = "";
+            qrPreview.focus();
+        }
+
+        qrPreview.addEventListener("click", openQrModal);
+        qrModalBackdrop.addEventListener("click", closeQrModal);
+        qrModalClose.addEventListener("click", closeQrModal);
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !qrModal.hidden) closeQrModal();
         });
     </script>
 

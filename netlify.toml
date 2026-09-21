@@ -1,3 +1,8 @@
+[[redirects]]
+  from = "/12-startups"
+  to = "/12-startups-in-12-weeks"
+  status = 301
+
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]

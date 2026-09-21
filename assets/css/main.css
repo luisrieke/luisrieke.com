@@ -373,6 +373,66 @@ body:has(.calendar-booking) {
   display: block;
 }
 
+/* Linktree / 12 startups page */
+.linktree-intro {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.linktree-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0 0 2.5rem;
+}
+
+.linktree-links li {
+  margin: 0;
+}
+
+.linktree-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text) !important;
+  background: var(--bg);
+  border: 1.5px solid var(--text-muted);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.linktree-link .icon {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.linktree-link:hover,
+.linktree-link:focus-visible {
+  border-color: var(--accent);
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--accent) !important;
+  outline: none;
+}
+
+.linktree-link:hover .icon,
+.linktree-link:focus-visible .icon {
+  opacity: 1;
+}
+
+.startup-weeks {
+  margin-top: 0.25rem;
+}
+
 /* Cash / payment page */
 .payment-buttons {
   display: flex;

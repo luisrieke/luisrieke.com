@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="I2MALhxDcoxdTIGHVPYUTg" async></script>
+  <!-- HTML Meta Tags -->
+  <title>Stats — Luis builds in public</title>
+  <meta name="description"
+    content="All my social media numbers in one place: X, YouTube, Instagram, TikTok and WhatsApp followers, views and engagement while building 12 startups in 12 weeks." />
+
+  <meta name="keywords"
+    content="Luis Rieke, stats, social media numbers, followers, build in public, 12 startups in 12 weeks, YouTube, Instagram, TikTok, X" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="language" content="English" />
+  <meta name="author" content="Luis Rieke" />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://luisrieke.com/stats" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Stats — Luis builds in public" />
+  <meta property="og:description"
+    content="All my social media numbers in one place: X, YouTube, Instagram, TikTok and WhatsApp followers, views and engagement while building 12 startups in 12 weeks." />
+  <meta property="og:image" content="https://luisrieke.com/assets/images/og/stats.png" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content="luisrieke.com" />
+  <meta property="twitter:url" content="https://luisrieke.com/stats" />
+  <meta name="twitter:title" content="Stats — Luis builds in public" />
+  <meta name="twitter:description"
+    content="All my social media numbers in one place: X, YouTube, Instagram, TikTok and WhatsApp followers, views and engagement while building 12 startups in 12 weeks." />
+  <meta name="twitter:image" content="https://luisrieke.com/assets/images/og/stats.png" />
+</head>
+
+<body>
+
+  <button type="button" class="button" onclick="window.location.href='/';">← back home</button>
+
+  <section id="main">
+    <div class="headline">
+      <p>Building in public — the numbers</p>
+    </div>
+
+    <div class="inner">
+      <section id="one" class="wrapper style1">
+        <header class="special">
+          <p class="linktree-intro">Every follower, view and like from my
+            <a href="/12-startups-in-12-weeks">12 startups in 12 weeks</a> challenge. Updated by hand,
+            straight from each platform's analytics.</p>
+
+          <div class="stats-progress" id="statsProgress"></div>
+
+          <div class="stats-hero" id="statsHero"></div>
+
+          <h2>Growth over time</h2>
+          <div class="stats-chart-wrap">
+            <div class="button-wrap stats-chart-switch" id="statsChartSwitch"></div>
+            <div class="stats-chart" id="statsChart"></div>
+            <ul class="stats-legend" id="statsLegend"></ul>
+          </div>
+
+          <h2>Followers by platform</h2>
+          <ul class="stats-bars" id="statsBars"></ul>
+
+          <h2>Platforms</h2>
+          <div class="stats-platforms" id="statsPlatforms"></div>
+
+          <h2>Snapshot log</h2>
+          <div class="stats-history" id="statsHistory"></div>
+
+          <h2>Follow along</h2>
+          <ul class="linktree-links" id="statsFollow"></ul>
+
+          <p class="stats-footnote" id="statsFootnote"></p>
+        </header>
+      </section>
+    </div>
+  </section>
+
+  <script>
+    // ═══════════════════════════════════════════════════════════════
+    //  HOW TO UPDATE
+    //  Append a new object to SNAPSHOTS (newest last). Every snapshot
+    //  needs `at` (ISO date+time). You can leave out platforms you did
+    //  not check that day — the page falls back to the last snapshot
+    //  that has them. If you read one platform at a different time,
+    //  add `at` inside that platform object.
+    //  Deltas, the chart and the snapshot log are computed for you.
+    // ═══════════════════════════════════════════════════════════════
+    const CHALLENGE = { start: "2026-09-14", end: "2026-12-06", days: 84 };
+
+    const SNAPSHOTS = [
+      {
+        at: "2026-09-22T03:00",
+        x: { followers: 193, posts: 89 },
+        instagram: {
+          followers: 134,
+          views: 8173,
+          viewers: 3695,
+          nonFollowerViews: 75.8,
+          reelsShare: 77.2,
+          interactions: 374,
+          accountsEngaged: 118,
+          profileViews: 599,
+          linkTaps: 13,
+        },
+        youtube: {
+          subscribers: 16,
+          views: 5763,
+          watchTimeHours: 16.5,
+          newSubscribers: 14,
+          topContent: [
+            { title: "Day 1 of building 12 startups in 12 weeks", date: "2026-09-14", views: 1139, avgDuration: "0:16", retention: "37.7%" },
+            { title: "It’s scary to #buildinpublic", date: "2026-09-14", views: 1115, avgDuration: "0:18", retention: "46.2%" },
+            { title: "Too cold in Berlin 🥶", date: "2026-09-20", views: 765, avgDuration: "0:16", retention: "28.2%" },
+            { title: "Really helpful it seems to be ✨🤭", date: "2026-09-20", views: 494, avgDuration: "0:14", retention: "29.9%" },
+            { title: "Get free cash together with your friends 💸🌴🍹", date: "2026-09-14", views: 421, avgDuration: "0:19", retention: "36.9%" },
+            { title: "The butterfly effect", date: "2026-09-16", views: 398, avgDuration: "0:38", retention: "32.4%" },
+            { title: "I asked strangers about my startup idea", date: "2026-09-20", views: 378, avgDuration: "0:26", retention: "20.7%" },
+            { title: "Living in a fragile world", date: "2026-09-21", views: 262, avgDuration: "0:20", retention: "22.7%" },
+            { title: "Is he too old to try friend-referrals.com? 👴", date: "2026-09-20", views: 206, avgDuration: "0:20", retention: "29.1%" },
+            { title: "Do people like my idea? #buildinpublic", date: "2026-09-19", views: 169, avgDuration: "0:21", retention: "28.4%" },
+          ],
+        },
+        tiktok: {
+          followers: 50,
+          likesTotal: 183,
+          videoViews: 5600,
+          profileViews: 64,
+          likes: 149,
+          comments: 10,
+          shares: 0,
+        },
+        whatsapp: { subscribers: 0 },
+      },
+      // { at: "2026-09-23T09:00", x: { followers: 0, posts: 0 }, instagram: { ... }, ... },
+    ];
+
+    // ─────────────────── platform definitions (rarely change) ───────────────────
+    const pct = (v) => v.toFixed(1) + "%";
+    const hours = (v) => v + " h";
+
+    const PLATFORMS = [
+      {
+        id: "x", name: "X", handle: "@luisbu1lds", url: "https://x.com/luisbu1lds", color: "#171717",
+        followersKey: "followers", followersLabel: "followers",
+        metrics: [{ key: "posts", label: "Posts" }],
+      },
+      {
+        id: "instagram", name: "Instagram", handle: "@luisbuildsinpublic", url: "https://www.instagram.com/luisbuildsinpublic", color: "#d62976",
+        followersKey: "followers", followersLabel: "followers", period: "last 30 days", viewsKey: "views",
+        metrics: [
+          { key: "views", label: "Views" },
+          { key: "viewers", label: "Viewers" },
+          { key: "nonFollowerViews", label: "Views from non-followers", fmt: pct, unit: "pp" },
+          { key: "reelsShare", label: "Views from Reels", fmt: pct, unit: "pp" },
+          { key: "interactions", label: "Interactions" },
+          { key: "accountsEngaged", label: "Accounts engaged" },
+          { key: "profileViews", label: "Profile views" },
+          { key: "linkTaps", label: "Link taps" },
+        ],
+      },
+      {
+        id: "youtube", name: "YouTube", handle: "@luisbuildsinpublic", url: "https://www.youtube.com/@luisbuildsinpublic", color: "#e02424",
+        followersKey: "subscribers", followersLabel: "subscribers", period: "last 28 days", viewsKey: "views", topKey: "topContent",
+        metrics: [
+          { key: "views", label: "Views" },
+          { key: "watchTimeHours", label: "Watch time", fmt: hours, unit: " h" },
+          { key: "newSubscribers", label: "New subscribers" },
+        ],
+      },
+      {
+        id: "tiktok", name: "TikTok", handle: "@luisbuildsinpublic", url: "https://www.tiktok.com/@luisbuildsinpublic", color: "#0ea5a4",
+        followersKey: "followers", followersLabel: "followers", period: "last 7 days", viewsKey: "videoViews",
+        metrics: [
+          { key: "likesTotal", label: "Likes (all time)" },
+          { key: "videoViews", label: "Video views" },
+          { key: "profileViews", label: "Profile views" },
+          { key: "likes", label: "Likes" },
+          { key: "comments", label: "Comments" },
+          { key: "shares", label: "Shares" },
+        ],
+      },
+      {
+        id: "whatsapp", name: "WhatsApp newsletter", short: "WhatsApp", handle: "beta testers group", url: "https://wa.me/15553568088?text=START", color: "#25d366",
+        followersKey: "subscribers", followersLabel: "subscribers",
+        note: "Brand new. Join and you’ll get every beta product link first — and be subscriber #1.",
+        metrics: [],
+      },
+    ];
+
+    const ICONS = {
+      x: '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>',
+      instagram: '<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>',
+      youtube: '<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>',
+      tiktok: '<path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>',
+      whatsapp: '<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>',
+    };
+    const icon = (id, size = 18) =>
+      `<svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="${size}" height="${size}" aria-hidden="true">${ICONS[id] || ""}</svg>`;
+
+    // ─────────────────────────── helpers ───────────────────────────
+    const nf = new Intl.NumberFormat("en-US");
+    const compact = (n) => (n >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1).replace(/\.0$/, "") + "K" : nf.format(n));
+    const parse = (iso) => new Date(iso.length <= 10 ? iso + "T00:00:00" : iso);
+    const fmtDate = (iso) => parse(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    const fmtDateShort = (iso) => parse(iso).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+    const fmtTime = (iso) => parse(iso).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false });
+    const fmtStamp = (iso) => `${fmtDate(iso)}, ${fmtTime(iso)}`;
+    const dayOf = (iso) => Math.max(0, Math.floor((parse(iso) - parse(CHALLENGE.start)) / 86400000));
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+    const snapshots = SNAPSHOTS.slice().sort((a, b) => parse(a.at) - parse(b.at));
+    const latest = snapshots[snapshots.length - 1];
+
+    // All snapshots containing data for a platform, with resolved timestamps
+    const seriesFor = (pid) =>
+      snapshots.filter((s) => s[pid]).map((s) => ({ at: s[pid].at || s.at, data: s[pid] }));
+    const latestFor = (pid) => seriesFor(pid).at(-1);
+    const previousFor = (pid) => seriesFor(pid).at(-2);
+
+    const fmtValue = (m, v) => (v == null ? "–" : m.fmt ? m.fmt(v) : typeof v === "number" ? nf.format(v) : v);
+    const deltaHtml = (cur, prev, unit = "") => {
+      if (cur == null || prev == null || typeof cur !== "number" || typeof prev !== "number") return "";
+      const d = Math.round((cur - prev) * 10) / 10;
+      if (d === 0) return `<span class="stats-delta flat">±0</span>`;
+      const txt = (d > 0 ? "+" : "−") + nf.format(Math.abs(d)) + (unit === "pp" ? " pp" : unit);
+      return `<span class="stats-delta ${d > 0 ? "up" : "down"}">${txt}</span>`;
+    };
+
+    // ─────────────────────────── header ───────────────────────────
+    const day = Math.min(dayOf(latest.at), CHALLENGE.days);
+    document.getElementById("statsProgress").innerHTML = `
+      <div class="stats-progress-label">
+        <span>Day ${day} of ${CHALLENGE.days}</span>
+        <time datetime="${esc(latest.at)}">Updated ${fmtStamp(latest.at)}</time>
+      </div>
+      <div class="stats-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="${CHALLENGE.days}" aria-valuenow="${day}">
+        <div class="stats-progress-fill" style="width:${(day / CHALLENGE.days) * 100}%"></div>
+      </div>`;
+
+    const followersOf = (p, snap) => (snap ? snap.data[p.followersKey] : null);
+    const totalFollowers = PLATFORMS.reduce((s, p) => s + (followersOf(p, latestFor(p.id)) || 0), 0);
+    const prevTotalFollowers = snapshots.length > 1
+      ? PLATFORMS.reduce((s, p) => s + (followersOf(p, previousFor(p.id)) ?? followersOf(p, latestFor(p.id)) ?? 0), 0)
+      : null;
+    const viewPlatforms = PLATFORMS.filter((p) => p.viewsKey && latestFor(p.id));
+    const totalViews = viewPlatforms.reduce((s, p) => s + (latestFor(p.id).data[p.viewsKey] || 0), 0);
+    const prevTotalViews = snapshots.length > 1
+      ? viewPlatforms.reduce((s, p) => s + ((previousFor(p.id) ?? latestFor(p.id)).data[p.viewsKey] || 0), 0)
+      : null;
+
+    document.getElementById("statsHero").innerHTML = `
+      <div class="stats-tile">
+        <span class="stats-tile-value">${nf.format(totalFollowers)}${deltaHtml(totalFollowers, prevTotalFollowers)}</span>
+        <span class="stats-tile-label">followers across ${PLATFORMS.length} channels</span>
+      </div>
+      <div class="stats-tile">
+        <span class="stats-tile-value">${compact(totalViews)}${deltaHtml(totalViews, prevTotalViews)}</span>
+        <span class="stats-tile-label">recent views on ${viewPlatforms.map((p) => p.short || p.name).join(", ")}</span>
+      </div>`;
+
+    // ─────────────────────────── chart ───────────────────────────
+    const CHART_METRICS = [
+      {
+        id: "followers", label: "Followers",
+        series: () => PLATFORMS.map((p) => ({
+          id: p.id, name: p.short || p.name, color: p.color,
+          points: seriesFor(p.id).map((s) => ({ t: parse(s.at), v: s.data[p.followersKey] })).filter((pt) => pt.v != null),
+        })),
+      },
+      {
+        id: "total", label: "Total followers",
+        series: () => [{
+          id: "total", name: "All channels", color: "#2563eb",
+          points: snapshots.map((s) => ({
+            t: parse(s.at),
+            v: PLATFORMS.reduce((sum, p) => {
+              const hit = seriesFor(p.id).filter((x) => parse(x.at) <= parse(s.at)).at(-1);
+              return sum + (hit ? hit.data[p.followersKey] || 0 : 0);
+            }, 0),
+          })),
+        }],
+      },
+      {
+        id: "views", label: "Views",
+        series: () => PLATFORMS.filter((p) => p.viewsKey).map((p) => ({
+          id: p.id, name: p.short || p.name, color: p.color,
+          points: seriesFor(p.id).map((s) => ({ t: parse(s.at), v: s.data[p.viewsKey] })).filter((pt) => pt.v != null),
+        })),
+      },
+    ];
+
+    const niceMax = (v) => {
+      if (v <= 0) return 10;
+      const mag = Math.pow(10, Math.floor(Math.log10(v)));
+      const n = v / mag;
+      const step = n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10;
+      return step * mag;
+    };
+
+    function renderChart(metricId) {
+      const metric = CHART_METRICS.find((m) => m.id === metricId);
+      const series = metric.series().filter((s) => s.points.length);
+      const W = Math.max(280, document.getElementById("statsChart").clientWidth || 560);
+      const H = W < 400 ? 220 : 260, PL = 44, PR = 16, PT = 14, PB = 30;
+      const all = series.flatMap((s) => s.points);
+      const times = all.map((p) => p.t.getTime());
+      const tMin = Math.min(...times), tMax = Math.max(...times);
+      const vMax = niceMax(Math.max(...all.map((p) => p.v)) * 1.15);
+      const single = tMin === tMax;
+      const x = (t) => (single ? (PL + W - PR) / 2 : PL + ((t - tMin) / (tMax - tMin)) * (W - PL - PR));
+      const y = (v) => PT + (1 - v / vMax) * (H - PT - PB);
+
+      const ySteps = 4;
+      const grid = Array.from({ length: ySteps + 1 }, (_, i) => {
+        const v = (vMax / ySteps) * i;
+        return `<line x1="${PL}" x2="${W - PR}" y1="${y(v)}" y2="${y(v)}" class="stats-chart-grid"/>
+                <text x="${PL - 8}" y="${y(v) + 3.5}" class="stats-chart-ylabel">${compact(Math.round(v))}</text>`;
+      }).join("");
+
+      // One label per calendar day, skip labels that would collide
+      const byDay = new Map();
+      [...new Set(times)].sort((a, b) => a - b).forEach((t) => {
+        const key = new Date(t).toDateString();
+        if (!byDay.has(key)) byDay.set(key, t);
+      });
+      const minGap = 48;
+      const kept = [];
+      [...byDay.values()].forEach((t, i, arr) => {
+        const isLast = i === arr.length - 1;
+        const collides = kept.length && x(t) - x(kept[kept.length - 1]) < minGap;
+        if (!collides) kept.push(t);
+        else if (isLast) kept[kept.length - 1] = t; // always show the newest date
+      });
+      const xLabels = kept
+        .map((t) => `<text x="${x(t)}" y="${H - 8}" class="stats-chart-xlabel">${fmtDateShort(new Date(t).toISOString())}</text>`)
+        .join("");
+
+      const lines = series.map((s) => {
+        const pts = s.points.slice().sort((a, b) => a.t - b.t);
+        const d = pts.map((p, i) => `${i ? "L" : "M"}${x(p.t.getTime()).toFixed(1)},${y(p.v).toFixed(1)}`).join(" ");
+        const dots = pts.map((p) => `
+          <circle cx="${x(p.t.getTime())}" cy="${y(p.v)}" r="3.5" fill="${s.color}" class="stats-chart-dot">
+            <title>${esc(s.name)} · ${fmtStamp(p.t.toISOString())} · ${nf.format(p.v)}</title>
+          </circle>`).join("");
+        return `${pts.length > 1 ? `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>` : ""}${dots}`;
+      }).join("");
+
+      document.getElementById("statsChart").innerHTML = `
+        <svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(metric.label)} over time">
+          ${grid}${xLabels}${lines}
+        </svg>
+        ${single ? `<p class="stats-footnote stats-chart-hint">One data point so far — lines appear with the next snapshot.</p>` : ""}`;
+
+      document.getElementById("statsLegend").innerHTML = series.map((s) => {
+        const pts = s.points.slice().sort((a, b) => a.t - b.t);
+        const cur = pts.at(-1).v, prev = pts.at(-2)?.v;
+        return `<li><span class="stats-legend-swatch" style="background:${s.color}"></span>${esc(s.name)}
+          <span class="stats-legend-value">${nf.format(cur)}${deltaHtml(cur, prev)}</span></li>`;
+      }).join("");
+
+      document.querySelectorAll("#statsChartSwitch .buttonLanguage").forEach((b) => {
+        b.classList.toggle("active", b.dataset.metric === metricId);
+      });
+      renderChart.current = metricId;
+    }
+
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => renderChart(renderChart.current || "followers"), 150);
+    });
+
+    document.getElementById("statsChartSwitch").innerHTML = CHART_METRICS.map((m) =>
+      `<button type="button" class="buttonLanguage" data-metric="${m.id}">${esc(m.label)}</button>`).join("");
+    document.getElementById("statsChartSwitch").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-metric]");
+      if (b) renderChart(b.dataset.metric);
+    });
+    renderChart("followers");
+
+    // ─────────────────────────── bars ───────────────────────────
+    const barData = PLATFORMS.map((p) => ({ p, v: followersOf(p, latestFor(p.id)) || 0 })).sort((a, b) => b.v - a.v);
+    const maxFollowers = Math.max(...barData.map((b) => b.v), 1);
+    document.getElementById("statsBars").innerHTML = barData.map(({ p, v }) => `
+      <li class="stats-bar">
+        <a class="stats-bar-name" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${icon(p.id, 16)}<span>${esc(p.short || p.name)}</span></a>
+        <div class="stats-bar-track"><div class="stats-bar-fill" style="width:${Math.max((v / maxFollowers) * 100, v ? 1.5 : 0)}%;background:${p.color}"></div></div>
+        <span class="stats-bar-value">${nf.format(v)}</span>
+      </li>`).join("");
+
+    // ─────────────────────────── cards ───────────────────────────
+    document.getElementById("statsPlatforms").innerHTML = PLATFORMS.map((p) => {
+      const cur = latestFor(p.id), prev = previousFor(p.id);
+      if (!cur) return "";
+      const metrics = p.metrics.map((m) => `
+        <div class="stats-metric">
+          <span class="stats-metric-value">${fmtValue(m, cur.data[m.key])}${deltaHtml(cur.data[m.key], prev?.data[m.key], m.unit)}</span>
+          <span class="stats-metric-label">${esc(m.label)}</span>
+        </div>`).join("");
+
+      const topList = p.topKey && cur.data[p.topKey];
+      const top = topList ? `
+        <details class="stats-top">
+          <summary>Top ${topList.length} videos (${esc(p.period || "recent")})</summary>
+          <ol class="stats-top-list">
+            ${topList.map((v) => `
+              <li>
+                <span class="stats-top-title">${esc(v.title)}</span>
+                <span class="stats-top-meta">${fmtDateShort(v.date)} · ${nf.format(v.views)} views · ø ${esc(v.avgDuration)} (${esc(v.retention)})</span>
+              </li>`).join("")}
+          </ol>
+        </details>` : "";
+
+      const followers = followersOf(p, cur);
+      return `
+        <article class="stats-card" id="${esc(p.id)}">
+          <div class="stats-card-head">
+            <a class="stats-card-title" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">
+              ${icon(p.id, 20)}<span>${esc(p.name)}</span><span class="stats-card-handle">${esc(p.handle)}</span>
+            </a>
+            <div class="stats-card-followers">
+              <span class="stats-card-followers-value">${nf.format(followers)}${deltaHtml(followers, followersOf(p, prev))}</span>
+              <span class="stats-card-followers-label">${esc(p.followersLabel)}</span>
+            </div>
+          </div>
+          <p class="stats-card-period">
+            <time datetime="${esc(cur.at)}">${fmtStamp(cur.at)}</time>${p.period ? ` · ${esc(p.period)}` : ""}${prev ? ` · Δ vs ${fmtDateShort(prev.at)}` : ""}
+          </p>
+          ${metrics ? `<div class="stats-metrics">${metrics}</div>` : ""}
+          ${p.note ? `<p class="stats-card-note">${esc(p.note)} <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">Join on WhatsApp →</a></p>` : ""}
+          ${top}
+        </article>`;
+    }).join("");
+
+    // ─────────────────────────── snapshot log ───────────────────────────
+    document.getElementById("statsHistory").innerHTML = `
+      <div class="stats-table-wrap">
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th>Snapshot</th>
+              ${PLATFORMS.map((p) => `<th title="${esc(p.name)}">${icon(p.id, 14)}<span class="sr-only">${esc(p.name)}</span></th>`).join("")}
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${snapshots.map((s, i) => {
+              const valueAt = (p, idx) => {
+                for (let j = idx; j >= 0; j--) if (snapshots[j][p.id]) return snapshots[j][p.id][p.followersKey] ?? 0;
+                return 0;
+              };
+              const cell = (v, pv, fresh = true) =>
+                `<td class="${fresh ? "" : "stats-table-carried"}">${nf.format(v)}${pv != null ? deltaHtml(v, pv) : ""}</td>`;
+              const total = PLATFORMS.reduce((sum, p) => sum + valueAt(p, i), 0);
+              const prevTotal = i ? PLATFORMS.reduce((sum, p) => sum + valueAt(p, i - 1), 0) : null;
+              return `
+                <tr>
+                  <td>
+                    <time datetime="${esc(s.at)}">${fmtDateShort(s.at)}</time>
+                    <span class="stats-table-day">${fmtTime(s.at)} · day ${dayOf(s.at)}</span>
+                  </td>
+                  ${PLATFORMS.map((p) => cell(valueAt(p, i), i ? valueAt(p, i - 1) : null, !!s[p.id])).join("")}
+                  ${cell(total, prevTotal)}
+                </tr>`;
+            }).join("")}
+          </tbody>
+        </table>
+      </div>
+      <p class="stats-footnote">${snapshots.length < 2
+        ? "First snapshot. Every update adds a row and the deltas fill in automatically."
+        : "Greyed values were carried over from the previous snapshot (platform not checked that day)."}</p>`;
+
+    // ─────────────────────────── follow + footnote ───────────────────────────
+    document.getElementById("statsFollow").innerHTML = PLATFORMS.map((p) => `
+      <li><a class="linktree-link" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${icon(p.id, 20)} ${esc(p.name)}</a></li>`).join("");
+
+    document.getElementById("statsFootnote").textContent =
+      `Numbers are copied by hand from each platform's analytics. Each card shows the exact time it was read. ` +
+      `Time ranges differ per platform and are noted on each card. No API, no automation — just building in public.`;
+  </script>
+</body>
+
+</html>

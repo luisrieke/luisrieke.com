@@ -433,6 +433,10 @@ body:has(.calendar-booking) {
   margin-top: 0.25rem;
 }
 
+.startup-weeks .week-skipped {
+  opacity: 0.55;
+}
+
 /* Cash / payment page */
 .payment-buttons {
   display: flex;

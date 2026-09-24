@@ -55,6 +55,8 @@
           <p class="linktree-intro">Building in public as @luisbuildsinpublic. Follow along or join the beta testers
             group to get every new beta tester product link.</p>
 
+          <div class="stats-progress" id="challengeProgress"></div>
+
           <ul class="linktree-links">
             <li>
               <a class="linktree-link" href="https://www.youtube.com/@luisbuildsinpublic" target="_blank"
@@ -127,6 +129,21 @@
       </section>
     </div>
   </section>
+
+  <script>
+    const CHALLENGE = { start: "2026-09-14", days: 98 };
+    const elapsed = Math.floor((Date.now() - new Date(CHALLENGE.start + "T00:00:00")) / 86400000);
+    const day = Math.min(Math.max(elapsed, 0), CHALLENGE.days);
+
+    document.getElementById("challengeProgress").innerHTML = `
+      <div class="stats-progress-label">
+        <span>Day ${day} of ${CHALLENGE.days}</span>
+        <a href="/stats">the numbers →</a>
+      </div>
+      <div class="stats-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="${CHALLENGE.days}" aria-valuenow="${day}">
+        <div class="stats-progress-fill" style="width:${(day / CHALLENGE.days) * 100}%"></div>
+      </div>`;
+  </script>
 </body>
 
 </html>

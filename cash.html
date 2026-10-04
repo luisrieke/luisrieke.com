@@ -55,7 +55,7 @@
                     <h2>PayPal / Revolut / Wise</h2>
                     <div class="payment-buttons">
                         <a href="https://www.paypal.com/paypalme/luisrieke" class="calendar-button"
-                            target="_blank">PayPal / luisrieke</a>
+                            id="paypalLink" target="_blank">PayPal / luisrieke</a>
                         <a href="https://revolut.me/luisrieke" class="calendar-button" target="_blank">Revolut /
                             luisrieke</a>
                         <a href="https://wise.com/pay/me/luisraphaelr" class="calendar-button" target="_blank">Wise /
@@ -109,6 +109,43 @@
         <div class="qr-modal-content">
             <button type="button" class="qr-modal-close" id="qrModalClose" aria-label="Close">×</button>
             <img src="assets/images/qr-code-luis.png" alt="QR code to pay Luis" class="qr-modal-image" />
+        </div>
+    </div>
+
+    <!-- PayPal "Friends and Family" guide -->
+    <div class="qr-modal pp-modal" id="ppModal" role="dialog" aria-modal="true" aria-labelledby="ppModalTitle" hidden>
+        <div class="qr-modal-backdrop" id="ppModalBackdrop"></div>
+        <div class="qr-modal-content pp-modal-content">
+            <button type="button" class="qr-modal-close" id="ppModalClose" aria-label="Close">×</button>
+            <p class="pp-step-count" id="ppStepCount">Step 1 of 3</p>
+
+            <div class="pp-step" data-step="1">
+                <h3 id="ppModalTitle">Please send as "Friends and Family" 🙏</h3>
+                <p>PayPal pre-selects <strong>"Goods and Services"</strong>, which charges me a fee on every payment.</p>
+                <p>Since this is a personal payment, please switch to <strong>"Friends and Family"</strong> before paying. It's free for both of us.</p>
+                <p class="pp-note">The next two steps show you exactly where to tap.</p>
+            </div>
+
+            <div class="pp-step" data-step="2" hidden>
+                <h3>Tap the arrow next to "Goods and Services"</h3>
+                <p>On the payment screen, open the payment type selection with the arrow on the right.</p>
+                <img src="assets/images/paypal/step-1-open-payment-type.jpg" class="pp-screenshot" loading="lazy"
+                    alt="PayPal payment screen with the arrow next to Goods and Services highlighted" />
+            </div>
+
+            <div class="pp-step" data-step="3" hidden>
+                <h3>Select "Friends and Family"</h3>
+                <p>Choose <strong>"Friends and Family"</strong> (in German: <em>"Freunde und Familie"</em>), then complete the payment. Thank you!</p>
+                <img src="assets/images/paypal/step-2-friends-and-family.jpg" class="pp-screenshot" loading="lazy"
+                    alt="PayPal payment type selection with Friends and Family selected" />
+            </div>
+
+            <div class="pp-actions">
+                <button type="button" class="calendar-button pp-back" id="ppBack" hidden>← Back</button>
+                <button type="button" class="calendar-button pp-next" id="ppNext">Next →</button>
+                <a href="https://www.paypal.com/paypalme/luisrieke" class="calendar-button pp-next" id="ppOpen"
+                    target="_blank" rel="noopener" hidden>Got it, open PayPal →</a>
+            </div>
         </div>
     </div>
 
@@ -205,6 +242,58 @@
             height: 256px;
             border-radius: 8px;
         }
+        .pp-modal-content {
+            max-width: min(420px, 100%);
+            max-height: calc(100dvh - 48px);
+            overflow-y: auto;
+            text-align: left;
+        }
+        .pp-step[hidden] {
+            display: none;
+        }
+        .pp-step-count {
+            margin: 0 0 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--text-muted);
+        }
+        .pp-step h3 {
+            margin: 0 2rem 0.75rem 0;
+            font-size: 1.125rem;
+            line-height: 1.35;
+        }
+        .pp-step p {
+            margin: 0 0 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+        .pp-note {
+            font-size: 0.8125rem !important;
+            color: var(--text-muted) !important;
+        }
+        .pp-screenshot {
+            display: block;
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+            margin: 0.5rem auto 0;
+            border-radius: 12px;
+            border: 1.5px solid var(--border);
+        }
+        .pp-actions {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: space-between;
+            margin-top: 1.25rem;
+        }
+        .pp-actions [hidden] {
+            display: none;
+        }
+        .pp-next {
+            margin-left: auto;
+        }
     </style>
 
     <script>
@@ -267,7 +356,48 @@
         qrModalClose.addEventListener("click", closeQrModal);
         document.addEventListener("keydown", (e) => {
             if (e.key === "Escape" && !qrModal.hidden) closeQrModal();
+            if (e.key === "Escape" && !ppModal.hidden) closePpModal();
         });
+
+        const paypalLink = document.getElementById("paypalLink");
+        const ppModal = document.getElementById("ppModal");
+        const ppSteps = ppModal.querySelectorAll(".pp-step");
+        const ppStepCount = document.getElementById("ppStepCount");
+        const ppBack = document.getElementById("ppBack");
+        const ppNext = document.getElementById("ppNext");
+        const ppOpen = document.getElementById("ppOpen");
+        const ppModalClose = document.getElementById("ppModalClose");
+        let ppStep = 1;
+
+        function showPpStep(step) {
+            ppStep = step;
+            ppSteps.forEach((el) => { el.hidden = Number(el.dataset.step) !== step; });
+            ppStepCount.textContent = `Step ${step} of ${ppSteps.length}`;
+            ppBack.hidden = step === 1;
+            ppNext.hidden = step === ppSteps.length;
+            ppOpen.hidden = step !== ppSteps.length;
+            (step === ppSteps.length ? ppOpen : ppNext).focus();
+        }
+        function openPpModal() {
+            ppModal.hidden = false;
+            document.body.style.overflow = "hidden";
+            showPpStep(1);
+        }
+        function closePpModal() {
+            ppModal.hidden = true;
+            document.body.style.overflow = "";
+            paypalLink.focus();
+        }
+
+        paypalLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            openPpModal();
+        });
+        ppNext.addEventListener("click", () => showPpStep(ppStep + 1));
+        ppBack.addEventListener("click", () => showPpStep(ppStep - 1));
+        ppOpen.addEventListener("click", closePpModal);
+        ppModalClose.addEventListener("click", closePpModal);
+        document.getElementById("ppModalBackdrop").addEventListener("click", closePpModal);
     </script>
 
 </body>

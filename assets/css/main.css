@@ -274,13 +274,19 @@ html:has(.calendar-booking) {
   overflow: hidden;
 }
 
+@supports (height: 100dvh) {
+  html:has(.calendar-booking) {
+    height: 100dvh;
+  }
+}
+
 body:has(.calendar-booking) {
   height: 100%;
   margin: 0;
   overflow: hidden;
 }
 
-.calendar-booking {
+#main.calendar-booking {
   margin: 0;
   height: 100%;
   min-height: 0;
@@ -290,10 +296,11 @@ body:has(.calendar-booking) {
 }
 
 /* Override #main > .inner max-width - use full width */
-.calendar-booking > .inner.inner-wide {
+#main.calendar-booking > .inner.inner-wide {
   max-width: none;
   width: 100%;
-  padding: 0;
+  padding: 0 24px;
+  box-sizing: border-box;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -326,12 +333,26 @@ body:has(.calendar-booking) {
   overflow: hidden;
 }
 
-.calendar-container iframe {
+.calendar-container .cal-embed {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 480px) {
+  #main.calendar-booking > .inner.inner-wide {
+    padding: 0;
+  }
+
+  .calendar-booking h2 {
+    margin: 1rem 16px 0.5rem;
+  }
+}
+
+.calendar-container iframe {
   border: 0;
 }
 

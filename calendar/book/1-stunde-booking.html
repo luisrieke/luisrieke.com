@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="de">
 
 <head>
 	<script src="https://analytics.ahrefs.com/analytics.js" data-key="I2MALhxDcoxdTIGHVPYUTg" async></script>
@@ -30,13 +30,25 @@
 
 					<h2>1-stündigen Termin vereinbaren!</h2>
 
-					<!-- Google Calendar Appointment Scheduling begin -->
+					<!-- Cal inline embed code begins -->
 					<div class="calendar-container">
-						<iframe
-							src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3jspKM81O5qHfe2i3ED7lYj3c5qZEfPlqe4-7eVeVgl-uzIJInHp4OtXVHYQ2knalexwAVZKuy?gv=true"
-							style="border: 0" width="100%" frameborder="0"></iframe>
+						<div class="cal-embed" id="my-cal-inline-1h"></div>
 					</div>
-					<!-- end Google Calendar Appointment Scheduling -->
+					<script type="text/javascript">
+						(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+						Cal("init", "1h", {origin:"https://app.cal.com"});
+						Cal.config = Cal.config || {};
+						Cal.config.forwardQueryParams = true;
+
+						Cal.ns["1h"]("inline", {
+							elementOrSelector:"#my-cal-inline-1h",
+							config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+							calLink: "luisrieke/1h",
+						});
+
+						Cal.ns["1h"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","theme":"light"});
+					</script>
+					<!-- Cal inline embed code ends -->
 
 				</header>
 			</section>

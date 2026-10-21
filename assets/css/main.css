@@ -295,10 +295,10 @@ body:has(.calendar-booking) {
   width: 100%;
 }
 
-/* Override #main > .inner max-width - use full width */
 #main.calendar-booking > .inner.inner-wide {
-  max-width: none;
+  max-width: 1100px;
   width: 100%;
+  margin: 0 auto;
   padding: 0 24px;
   box-sizing: border-box;
   flex: 1;

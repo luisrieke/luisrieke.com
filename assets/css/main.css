@@ -342,6 +342,25 @@ body:has(.calendar-booking) {
   -webkit-overflow-scrolling: touch;
 }
 
+@media (min-width: 737px) {
+  .calendar-booking .wrapper.style1 .special {
+    justify-content: center;
+  }
+
+  .calendar-booking .calendar-container {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-container .cal-embed {
+    position: relative;
+    inset: auto;
+    flex: 0 1 auto;
+    min-height: 0;
+  }
+}
+
 @media (max-width: 480px) {
   #main.calendar-booking > .inner.inner-wide {
     padding: 0;

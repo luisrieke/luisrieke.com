@@ -477,6 +477,11 @@ body:has(.calendar-booking) {
   opacity: 0.55;
 }
 
+.startup-weeks .long-week {
+  font-size: 0.8em;
+  color: var(--text-secondary);
+}
+
 /* Cash / payment page */
 .payment-buttons {
   display: flex;

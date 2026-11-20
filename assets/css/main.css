@@ -482,6 +482,31 @@ body:has(.calendar-booking) {
   color: var(--text-secondary);
 }
 
+.startup-weeks .week-note {
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  background: rgba(37, 99, 235, 0.05);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+}
+
+.startup-weeks .week-note-badge {
+  display: inline-block;
+  margin-right: 0.4rem;
+  padding: 0.05em 0.5em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(37, 99, 235, 0.12);
+  border-radius: 999px;
+  vertical-align: 0.05em;
+}
+
 /* Cash / payment page */
 .payment-buttons {
   display: flex;
